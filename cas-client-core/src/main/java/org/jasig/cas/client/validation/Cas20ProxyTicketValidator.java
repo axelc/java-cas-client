@@ -46,7 +46,7 @@ public class Cas20ProxyTicketValidator extends Cas20ServiceTicketValidator {
     }
 
     protected String getUrlSuffix() {
-        return "proxyValidate";
+        return System.getProperty("Cas20ProxyTicketValidator.url", "proxyValidate");
     }
 
     protected void customParseResponse(final String response, final Assertion assertion) throws TicketValidationException {
